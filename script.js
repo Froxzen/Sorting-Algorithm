@@ -81,11 +81,16 @@ speedSlider.addEventListener("input", function() {
     speed = parseInt(speedSlider.value);
 })
 
+// Helper function to create a delay
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 // Sort the elements using Bubble Sort
-function bubble_sort() {
-    sort.addEventListener("click", function() {
+async function bubble_sort() {
+    sort.addEventListener("click", async function() {  
         const dataList = document.querySelectorAll(".data");
-    
+
         generate.disabled = true;
         sizeSlider.disabled = true;
         speedSlider.disabled = true;
@@ -95,62 +100,56 @@ function bubble_sort() {
         speedBtn.style.backgroundColor = "#808080";
         sort.style.backgroundColor = "#808080";
         stopBtn.style.backgroundColor = "rgb(236, 16, 16)";
-    
-        let delay = 0;
-        let stopFlag = false; 
-        let timeouts = [];
-    
+
+        let stopFlag = false;
+
         stopBtn.addEventListener("click", () => {
             stopFlag = true;
             timeouts.forEach(timeoutId => clearTimeout(timeoutId));
             timeouts = [];
             resetControls();
         });
-    
+
         for (let i = 0; i < dataList.length - 1; i++) {
-            if (stopFlag) break; 
-    
+            let changed = false;
+            if (stopFlag) {
+                break;
+            }
+
             for (let j = 0; j < dataList.length - 1 - i; j++) {
-                if (stopFlag) break;
-    
-                let timeoutId = setTimeout(() => {
-                    if (stopFlag) return;
-    
-                    let value1 = parseInt(dataList[j].getAttribute("value"));
-                    let value2 = parseInt(dataList[j + 1].getAttribute("value"));
-    
-                    dataList[j].style.backgroundColor = "blue";
-                    dataList[j + 1].style.backgroundColor = "blue";
-    
-                    if (value1 > value2) {
-                        let tempHeight = dataList[j].style.height;
-                        let tempValue = dataList[j].getAttribute("value");
-    
-                        dataList[j].style.height = dataList[j + 1].style.height;
-                        dataList[j].setAttribute("value", dataList[j + 1].getAttribute("value"));
-    
-                        dataList[j + 1].style.height = tempHeight;
-                        dataList[j + 1].setAttribute("value", tempValue);
-                    }
-    
-                    setTimeout(() => {
-                        dataList[j].style.backgroundColor = "black";
-                        dataList[j + 1].style.backgroundColor = "black";
-                    }, speed / 2);
-                }, delay);
-    
-                timeouts.push(timeoutId);
-                delay += speed;
+                if (stopFlag) {
+                    break;
+                }
+                let value1 = parseInt(dataList[j].getAttribute("value"));
+                let value2 = parseInt(dataList[j + 1].getAttribute("value"));
+
+                dataList[j].style.backgroundColor = "blue";
+                dataList[j + 1].style.backgroundColor = "blue";
+
+                if (value1 > value2) {
+                    let tempHeight = dataList[j].style.height;
+                    let tempValue = dataList[j].getAttribute("value");
+
+                    dataList[j].style.height = dataList[j + 1].style.height;
+                    dataList[j].setAttribute("value", dataList[j + 1].getAttribute("value"));
+
+                    dataList[j + 1].style.height = tempHeight;
+                    dataList[j + 1].setAttribute("value", tempValue);
+                    changed = true;
+                }
+
+                await sleep(speed); 
+
+                dataList[j].style.backgroundColor = "black";
+                dataList[j + 1].style.backgroundColor = "black";
+
+                await sleep(speed / 2); 
+            }
+            if (!changed || stopFlag) {
+                resetControls();
+                break;
             }
         }
-        
-        // Add a final timeout to reset everything after sorting is complete
-        let finalTimeoutId = setTimeout(() => {
-            if (!stopFlag) {
-                resetControls();
-            }
-        }, delay);
-        timeouts.push(finalTimeoutId);
     });
 }
 
