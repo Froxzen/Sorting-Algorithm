@@ -2,15 +2,15 @@
 
 A program created with Vanilla Javascript. It allows you to visualize the Bubble Sort algorithm in action. You can generate a new dataset, change its size, and adjust the speed of the visualization.
 
+## Live Demo
+
+Check out the live demo of the project at: [Sorting Algorithm Visualizer](https://froxzen.github.io/Sorting-Algorithm/)
+
 ## Features
 
 - **Generate New Array:** Create a random array of values to be sorted.
 - **Adjust Array Size:** Modify the size of the array to see how algorithms handle different data sets.
 - **Control Speed:** Speed up or slow down the visualization to observe the sorting process in detail.
-
-## Live Demo
-
-Check out the live demo of the project at: [Sorting Algorithm Visualizer](https://froxzen.github.io/Sorting-Algorithm/)
 
 ## How to Use
 
