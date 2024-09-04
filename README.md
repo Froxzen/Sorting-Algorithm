@@ -1,6 +1,6 @@
 # Sorting Algorithm Visualizer
 
-A program created with Vanilla Javascript. It allows you to visualize the Bubble Sort algorithm in action. You can generate a new dataset, change its size, and adjust the speed of the visualization.
+A program created with Vanilla Javascript which allows you to visualize the Bubble Sort algorithm in action. You can generate a new dataset, change its size, and adjust the speed of the visualization.
 
 ## Live Demo
 
