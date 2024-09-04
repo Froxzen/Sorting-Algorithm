@@ -123,8 +123,8 @@ async function bubble_sort() {
                 let value1 = parseInt(dataList[j].getAttribute("value"));
                 let value2 = parseInt(dataList[j + 1].getAttribute("value"));
 
-                dataList[j].style.backgroundColor = "blue";
-                dataList[j + 1].style.backgroundColor = "blue";
+                dataList[j].style.backgroundColor = "#1E90FF";
+                dataList[j + 1].style.backgroundColor = "#1E90FF";
 
                 if (value1 > value2) {
                     let tempHeight = dataList[j].style.height;
