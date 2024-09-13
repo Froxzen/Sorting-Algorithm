@@ -50,6 +50,10 @@ button:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+#sort {
+    background-color: #34ba34;
+}
+
 #stop {
     background-color: #808080;
 }
