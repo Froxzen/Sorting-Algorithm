@@ -1,9 +1,3 @@
-const container = document.querySelector(".container");
-let windowWidth = window.innerWidth;
-let windowHeight = window.innerHeight;
-let numberOfElements = 50;
-let speed = 100;
-
 const generate = document.querySelector("#generate");
 const sizeBtn = document.querySelector("#size")
 const speedBtn = document.querySelector("#speed")
@@ -11,6 +5,12 @@ const stopBtn = document.querySelector("#stop");
 const sizeSlider = document.querySelector("#size-slider");
 const speedSlider = document.querySelector("#speed-slider");
 const sort = document.querySelector("#sort");
+const container = document.querySelector(".container");
+
+let windowWidth = window.innerWidth;
+let windowHeight = window.innerHeight;
+let numberOfElements = 50;
+let speed = 100;
 
 // Increase the heights of the data blocks for large screen devices.
 function growDataHeight() {
@@ -145,6 +145,7 @@ async function bubble_sort() {
 
                 await sleep(speed / 2); 
             }
+            
             if (!changed || stopFlag) {
                 resetControls();
                 break;
@@ -161,7 +162,7 @@ function resetControls() {
     generate.style.backgroundColor = "#3498db";
     sizeBtn.style.backgroundColor = "#3498db";
     speedBtn.style.backgroundColor = "#3498db";
-    sort.style.backgroundColor = "#3498db";
+    sort.style.backgroundColor = "#34ba34";
     stopBtn.style.backgroundColor = "#808080";
 }
 
