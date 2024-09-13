@@ -5,9 +5,6 @@
     font-family: "Josefin Sans", sans-serif;
 
 }
-body {
-    background-color: #f0f0f0;
-}
 
 header {
     background-color: #2d719e;
@@ -24,23 +21,6 @@ header {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-}
-
-.container {
-    position: fixed;
-    width: 90%;
-    bottom: 2rem;
-    display: flex;
-    gap: 0.1vw;
-    align-items: flex-end;
-    justify-content: center;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.data {
-    background-color: black;
-    border-radius: 2px 2px 0 0;
 }
 
 button {
@@ -88,13 +68,7 @@ button:active {
     width: 10vw;
 }
 
-#sort {
-    position: relative;
-}
-
 #stop {
-    position: relative;
-    
     background-color: #808080;
 }
 
@@ -131,6 +105,23 @@ input[type="range"]::-moz-range-thumb {
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    position: fixed;
+    width: 90%;
+    bottom: 2rem;
+    display: flex;
+    gap: 0.1vw;
+    align-items: flex-end;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.data {
+    background-color: black;
+    border-radius: 2px 2px 0 0;
 }
 
 @media (max-width: 768px) {
