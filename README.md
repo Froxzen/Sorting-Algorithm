@@ -4,7 +4,7 @@ A program created with Vanilla Javascript which allows you to visualize the Bubb
 
 ## Live Demo
 
-Check out the live demo of the project at: [Sorting Algorithm Visualizer](https://froxzen.github.io/Sorting-Algorithm/)
+Check out the live demo of the project [here](https://bubble-sorting-algo.vercel.app/)
 
 ## Features
 
