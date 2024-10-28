@@ -122,3 +122,53 @@ input[type="range"]:hover {
     background-color: black;
     border-radius: 2px 2px 0 0;
 }
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #title {
+        margin-top: -0.5rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 0.7rem;
+        width: 100%;
+    }
+
+    button {
+        width: 70%;
+        font-size: 1rem;
+        padding: 0.2rem;
+    }
+
+    .slider-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #size-slider, #speed-slider {
+        width: 70%;
+    }
+
+    .container {
+        height: 20%;
+    }
+
+    input[type="range"] {
+        width: 100%;
+    }
+}
