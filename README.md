@@ -1,10 +1,10 @@
 # Sorting Algorithm Visualizer
 
-A program created with Vanilla Javascript which allows you to visualize the Bubble Sort algorithm in action. You can generate a new dataset, change its size, and adjust the speed of the visualization.
+A program which allows you to visualize the Bubble Sort algorithm in action. You can generate a new dataset, change its size, and adjust the speed of the visualization.
 
 ## Live Demo
 
-Check out the live demo of the project at: [Sorting Algorithm Visualizer](https://froxzen.github.io/Sorting-Algorithm/)
+Check out the live demo of the project [here](https://bubble-sorting-algo.vercel.app/)
 
 ## Features
 
@@ -24,10 +24,15 @@ Check out the live demo of the project at: [Sorting Algorithm Visualizer](https:
 - Bubble Sort
 - More algorithms to be added soon!
 
-## Technologies Used
+## Tech Stack
 
-- **HTML/CSS/JavaScript**: The core of the visualizer.
-- **GitHub Pages**: For hosting the live demo.
+Frontend: HTML, CSS, TypeScript
+
+Backend: TypeScript 
+
+Build Tool: Vite
+
+Deployment: Vercel
 
 ## Contributing
 
