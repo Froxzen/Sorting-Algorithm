@@ -4,7 +4,7 @@ A program which allows you to visualize the Bubble Sort algorithm in action. You
 
 ## Live Demo
 
-Check out the live demo of the project [here](https://bubble-sorting-algo.vercel.app/)
+Check out the live demo of the project [here](https://sorting-algorithm.pages.dev/)
 
 ## Features
 
