@@ -72,7 +72,7 @@ export class SortingVisualizer {
             const maxSpeed = parseInt(this.controls.speedSlider.max);
             const minSpeed = parseInt(this.controls.speedSlider.min);
             const sliderValue = parseInt(this.controls.speedSlider.value);
-            this.state.speed = maxSpeed + minSpeed - sliderValue; // Invert the speed value
+            this.state.speed = maxSpeed + minSpeed - sliderValue;
         });
 
         this.setupSortingControls();

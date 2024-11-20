@@ -13,8 +13,8 @@
       "isolatedModules": true,
       "noEmit": false,
       "outDir": "./dist",
-      "rootDir": "./src"
+      "rootDir": "./"
   },
-  "include": ["src/**/*"],
+  "include": ["/**/*", "utils.ts", "visualizer.ts", "types.ts"],
   "exclude": ["node_modules"]
 }
